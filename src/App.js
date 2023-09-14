@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import NavScrollExample from "./component/Navbar";
+import BasicExample from "./component/Cardlist";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <div>
+
+        {/* this is a bootstrap navbar  */}
+        <NavScrollExample />
+      </div>
+      <div class="container" style={{ marginTop: '80px' }}>
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+
+            {/* This is the Heading */}
+            <h2>St_Manuel Check list</h2>
+          </div>
+          <div class="col-4"></div>
+        </div>
+      </div>
+      <div>
+        {/* This is the bootstrap Card  */}
+        <BasicExample/>
+      </div>
+    </Fragment>
   );
 }
 
